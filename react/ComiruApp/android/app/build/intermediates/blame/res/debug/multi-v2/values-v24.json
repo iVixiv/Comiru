@@ -4,7 +4,24 @@
             "outputFile": "/Users/natsu/Project/Comiru/react/ComiruApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/natsu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e885209f90ee050d89fee1f4e5e73729/res/values-v24/values-v24.xml",
+                    "source": "/Users/natsu/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/92c0adf3dd021edc1720828f6d324ad6/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "347,413,474,540",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "408,469,535,602"
+                    }
+                },
+                {
+                    "source": "/Users/natsu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/867a38dd870b338c35d985c75c98bdbb/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
