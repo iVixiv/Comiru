@@ -1,0 +1,209 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+MERGED from [:react-native-gesture-handler] /Users/natsu/Project/Comiru/react/ComiruApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.58.4] /Users/natsu/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/cacc379157ebe8b379374c0b0581ba08/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e885209f90ee050d89fee1f4e5e73729/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/09169f4a22fe563af4a4749408f02687/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/de93455a2a519e8d1d7f13acf31d6a64/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/723e14a5855a226cda54cb759f7c764d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/d1c728ff4801497280acfcd1a96812fb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/6ecc3611c26245601b35523c31263d1f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/92ac07cedfde21fda46837e3bba5b716/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/60132efaab21ee3cd8fb35937030d859/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/2bbb02b37b3bebe19e79ecbda9e84ced/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/d97837c2c3a940d82631fd91a5d89ccb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/60d0593337cbbda8d40ed00752fe18b0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/8b10e25bb36534319d23abcc56f06744/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/fcd9a7abdc0a84098f14b687ad881417/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b37989f53b46f36519318bcd8cb559e0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/265be440d2f5a122e99fb340037f470a/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c991d206cfd39d15819ee9f099333456/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/7eaa20ecd1dbf0017393bc29e6feddcf/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1ae5b8f671ebbc5fe5717dbf2a5c87da/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/09bc22616bb58e950f2a808040fc9c48/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/f9842ff711e5c5b917164db997dd0b5a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/807707ca4a245703bb781902d7fb1b8b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/e632679bea389fa7855a2110a94e97d7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/5abde99b000a746fb630b8f46675f099/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5c95f1e070cdab344b5c330d7fba615a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/39d447fbcd505678c65c4b5b6fe64495/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/fa7489f567b0de3ae4089877f24a2926/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/159e6d02cdfb3e54738e3a2c88b0b399/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/1dd4c9a68ea4ead7e840659131b7d5d0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/3d4eb92d772f0717d183287a3b8c4d28/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/44b50dc0a020c33b7ade5a26d16df8ec/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/482c6ea019c021259303f0a9ed29d5f4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/a11164473e42e853ab008c43d9421754/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r174650] /Users/natsu/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/32b7f48341a838042075efa9917f4d58/AndroidManifest.xml:1:1-3:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/5b0af09747d4a6c248287400e1eef7de/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+	package
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:2:5-28
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:5:5-77
+MERGED from [com.facebook.react:react-native:0.58.4] /Users/natsu/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/cacc379157ebe8b379374c0b0581ba08/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.58.4] /Users/natsu/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/cacc379157ebe8b379374c0b0581ba08/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:5:22-75
+application
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:7:5-25:19
+MERGED from [com.facebook.react:react-native:0.58.4] /Users/natsu/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/cacc379157ebe8b379374c0b0581ba08/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.58.4] /Users/natsu/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/cacc379157ebe8b379374c0b0581ba08/AndroidManifest.xml:13:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/265be440d2f5a122e99fb340037f470a/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/265be440d2f5a122e99fb340037f470a/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c991d206cfd39d15819ee9f099333456/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c991d206cfd39d15819ee9f099333456/AndroidManifest.xml:22:5-23:19
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/a11164473e42e853ab008c43d9421754/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/a11164473e42e853ab008c43d9421754/AndroidManifest.xml:11:5-20
+MERGED from [org.webkit:android-jsc:r174650] /Users/natsu/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/32b7f48341a838042075efa9917f4d58/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/natsu/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/32b7f48341a838042075efa9917f4d58/AndroidManifest.xml:2:3-17
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/265be440d2f5a122e99fb340037f470a/AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:9:7-39
+	android:roundIcon
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:11:7-52
+	android:icon
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:10:7-41
+	android:allowBackup
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:12:7-34
+	android:theme
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:13:7-38
+	android:name
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:8:7-38
+activity#com.comiruapp.MainActivity
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:14:7-23:18
+	android:label
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:16:9-41
+	android:windowSoftInputMode
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:18:9-51
+	android:configChanges
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:17:9-79
+	android:name
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:15:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:19:9-22:25
+action#android.intent.action.MAIN
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:20:13-65
+	android:name
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:20:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:21:13-73
+	android:name
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:21:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:24:7-84
+	android:name
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:24:17-81
+uses-sdk
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-gesture-handler] /Users/natsu/Project/Comiru/react/ComiruApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/natsu/Project/Comiru/react/ComiruApp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.58.4] /Users/natsu/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/cacc379157ebe8b379374c0b0581ba08/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.58.4] /Users/natsu/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/cacc379157ebe8b379374c0b0581ba08/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e885209f90ee050d89fee1f4e5e73729/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e885209f90ee050d89fee1f4e5e73729/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/09169f4a22fe563af4a4749408f02687/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/09169f4a22fe563af4a4749408f02687/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/de93455a2a519e8d1d7f13acf31d6a64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/de93455a2a519e8d1d7f13acf31d6a64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/723e14a5855a226cda54cb759f7c764d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/723e14a5855a226cda54cb759f7c764d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/d1c728ff4801497280acfcd1a96812fb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/d1c728ff4801497280acfcd1a96812fb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/6ecc3611c26245601b35523c31263d1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/6ecc3611c26245601b35523c31263d1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/92ac07cedfde21fda46837e3bba5b716/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/92ac07cedfde21fda46837e3bba5b716/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/60132efaab21ee3cd8fb35937030d859/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/60132efaab21ee3cd8fb35937030d859/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/2bbb02b37b3bebe19e79ecbda9e84ced/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/2bbb02b37b3bebe19e79ecbda9e84ced/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/d97837c2c3a940d82631fd91a5d89ccb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/d97837c2c3a940d82631fd91a5d89ccb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/60d0593337cbbda8d40ed00752fe18b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/60d0593337cbbda8d40ed00752fe18b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/8b10e25bb36534319d23abcc56f06744/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/8b10e25bb36534319d23abcc56f06744/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/fcd9a7abdc0a84098f14b687ad881417/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/fcd9a7abdc0a84098f14b687ad881417/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b37989f53b46f36519318bcd8cb559e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b37989f53b46f36519318bcd8cb559e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/265be440d2f5a122e99fb340037f470a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/265be440d2f5a122e99fb340037f470a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c991d206cfd39d15819ee9f099333456/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c991d206cfd39d15819ee9f099333456/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/7eaa20ecd1dbf0017393bc29e6feddcf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/7eaa20ecd1dbf0017393bc29e6feddcf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1ae5b8f671ebbc5fe5717dbf2a5c87da/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1ae5b8f671ebbc5fe5717dbf2a5c87da/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/09bc22616bb58e950f2a808040fc9c48/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/09bc22616bb58e950f2a808040fc9c48/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/f9842ff711e5c5b917164db997dd0b5a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/f9842ff711e5c5b917164db997dd0b5a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/807707ca4a245703bb781902d7fb1b8b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/807707ca4a245703bb781902d7fb1b8b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/e632679bea389fa7855a2110a94e97d7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/e632679bea389fa7855a2110a94e97d7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/5abde99b000a746fb630b8f46675f099/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/5abde99b000a746fb630b8f46675f099/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5c95f1e070cdab344b5c330d7fba615a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5c95f1e070cdab344b5c330d7fba615a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/39d447fbcd505678c65c4b5b6fe64495/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/natsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/39d447fbcd505678c65c4b5b6fe64495/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/fa7489f567b0de3ae4089877f24a2926/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/fa7489f567b0de3ae4089877f24a2926/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/159e6d02cdfb3e54738e3a2c88b0b399/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/159e6d02cdfb3e54738e3a2c88b0b399/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/1dd4c9a68ea4ead7e840659131b7d5d0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/1dd4c9a68ea4ead7e840659131b7d5d0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/3d4eb92d772f0717d183287a3b8c4d28/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/3d4eb92d772f0717d183287a3b8c4d28/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/44b50dc0a020c33b7ade5a26d16df8ec/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/44b50dc0a020c33b7ade5a26d16df8ec/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/482c6ea019c021259303f0a9ed29d5f4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/482c6ea019c021259303f0a9ed29d5f4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/a11164473e42e853ab008c43d9421754/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/a11164473e42e853ab008c43d9421754/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/5b0af09747d4a6c248287400e1eef7de/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/natsu/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/5b0af09747d4a6c248287400e1eef7de/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/natsu/Project/Comiru/react/ComiruApp/android/app/src/main/AndroidManifest.xml:1:1-27:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE

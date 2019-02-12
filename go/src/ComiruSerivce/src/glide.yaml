@@ -1,0 +1,15 @@
+package: ComiruSerivce
+import:
+- package: github.com/coderminer/restful
+  version: ^0.3.0
+  subpackages:
+  - auth
+  - helper
+  - models
+- package: github.com/dgrijalva/jwt-go
+  version: ^3.2.0
+- package: github.com/globalsign/mgo
+  subpackages:
+  - bson
+- package: github.com/gorilla/mux
+  version: ^1.7.0

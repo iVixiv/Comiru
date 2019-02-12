@@ -1,0 +1,21 @@
+hash: c46b439a6e17e23737094db09681724e66e89c01133a25957def4fb0ad6f2b79
+updated: 2019-02-10T21:25:37.974526+09:00
+imports:
+- name: github.com/coderminer/restful
+  version: a4a11b8101ad969ac2df2a0a7de67175a3dd4402
+  subpackages:
+  - auth
+  - helper
+  - models
+- name: github.com/dgrijalva/jwt-go
+  version: 06ea1031745cb8b3dab3f6a236daf2b0aa468b7e
+- name: github.com/globalsign/mgo
+  version: eeefdecb41b842af6dc652aaea4026e8403e62df
+  subpackages:
+  - bson
+  - internal/json
+  - internal/sasl
+  - internal/scram
+- name: github.com/gorilla/mux
+  version: a7962380ca08b5a188038c69871b8d3fbdf31e89
+testImports: []
