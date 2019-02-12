@@ -3624,6 +3624,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946752" weight="0.32967034" />
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
