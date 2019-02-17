@@ -29,18 +29,20 @@ func MD5(str string) string {
 }
 
 //注册
-func Register(username, password string) (string, error) {
+func Register(username, password,class string, identity uint8) (string, error) {
 	//只保存密码摘要
 	password = MD5(password)
 	//生成Token
 	token, _ := auth.GenerateToken(username)
 	//新用户数据插入数据库
-	sql := `INSERT INTO user (username,password,token) VALUES (?,?,?)`
+	sql := `INSERT INTO user (username,password,token,class,identity) VALUES (?,?,?,?,?)`
 
 	var args []interface{}
 	args = append(args, username)
 	args = append(args, password)
 	args = append(args, token)
+	args = append(args, class)
+	args = append(args, identity)
 	if _, err := MySQL.Exec(sql, args...); err != nil {
 		log.Print(err)
 		return "", err

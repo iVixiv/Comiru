@@ -3,3 +3,5 @@ __tests__/
 build/
 .idea/
 .DS_Store
+.next/
+dist/
