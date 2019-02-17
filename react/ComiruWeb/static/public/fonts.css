@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'NotoSansHans';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/NotoSansHans-Light.otf');
+}
+
+@font-face {
+    font-family: 'NotoSansHansRegular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/NotoSansHans-Regular.otf');
+}
