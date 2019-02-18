@@ -24,7 +24,11 @@ func init() {
 	register("OPTIONS", "/class/{id}", handleCors, nil)
 	register("POST", "/user/register", controllers.Register, nil)
 	register("POST", "/user/login", controllers.Login, nil)
-	register("GET", "/push/{id}", controllers.PushNotify, nil)
+	register("POST", "/push/{id}", controllers.PushNotify, nil)
+	register("GET", "/watch/{id}", controllers.UsersByWatch, nil)
+	register("GET", "/watched/{id}", controllers.UsersByWatched, nil)
+	register("POST", "/watch", controllers.Watch, nil)
+	register("POST", "/unwatch", controllers.UnWatch, nil)
 }
 
 func handleCors(w http.ResponseWriter, r *http.Request) {

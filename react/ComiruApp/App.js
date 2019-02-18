@@ -11,6 +11,7 @@ class HomeScreen extends React.Component {
   constructor(properties) {
     super(properties);
     OneSignal.init("a7a034f9-48b7-4701-9d72-bcce27d09c08");
+    OneSignal.sendTag("user_id","11")
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
     OneSignal.addEventListener('ids', this.onIds);

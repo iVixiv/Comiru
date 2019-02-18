@@ -33,10 +33,19 @@ class Home extends Component {
     this.state = {
       user: {},
       class: "1",
-      classInfo: []
+      classInfo: [],
+      watch: [],
+      userList: [],
+      message: ""
     };
     this.updateClassInfo = this.updateClassInfo.bind(this)
+    this.updateWatch = this.updateWatch.bind(this)
+    this.unWatch = this.unWatch.bind(this)
+    this.Watch = this.Watch.bind(this)
     this.handleInput = this.handleInput.bind(this)
+    this.handleWatch = this.handleWatch.bind(this)
+    this.updateUserInfo = this.updateUserInfo.bind(this)
+    this.postMessage = this.postMessage.bind(this)
   }
 
   componentDidMount() {
@@ -45,10 +54,12 @@ class Home extends Component {
       window.location = "/"
     } else {
       this.setState({ user: user })
+      // this.updateClassInfo()
+      // this.updateWatch()
     }
   }
 
-  login() {
+  loginOut() {
     window.localStorage.setItem("user", "")
     window.location = "/"
   }
@@ -71,10 +82,168 @@ class Home extends Component {
           app.setState({
             classInfo: res.data
           })
+        } else if (res.code === 401) {
+          alert(res.msg)
+          app.loginOut()
         } else {
           alert(res.msg)
         }
       });
+  }
+
+  updateWatch() {
+    let url = "http://localhost:3333/watched/" + (this.state.user && this.state.user.id)
+    let app = this
+    fetch(url, {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        "authorization": this.state.user.token,
+        "username": this.state.user.username
+      }
+    })
+      .then(response => response.json())
+      .then(function (res) {
+        console.log(res)
+        if (res.code === 200) {
+          app.setState({
+            watch: res.data
+          })
+        } else if (res.code === 401) {
+          alert(res.msg)
+          app.loginOut()
+        } else {
+          alert(res.msg)
+        }
+      });
+  }
+
+  updateUserInfo() {
+    let url = "http://localhost:3333/watch/" + (this.state.user && this.state.user.id)
+    let app = this
+    fetch(url, {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        "authorization": this.state.user.token,
+        "username": this.state.user.username
+      }
+    })
+      .then(response => response.json())
+      .then(function (res) {
+        console.log(res)
+        if (res.code === 200) {
+          app.setState({
+            userList: res.data
+          })
+        } else if (res.code === 401) {
+          alert(res.msg)
+          app.loginOut()
+        } else {
+          alert(res.msg)
+        }
+      });
+  }
+
+  Watch(e) {
+    let url = "http://localhost:3333/watch"
+    let app = this
+    let data = {
+      user_id: this.state.user.id,
+      w_id: parseInt(e.target.name)
+    }
+    fetch(url, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        "authorization": this.state.user.token,
+        "username": this.state.user.username
+      },
+      body: JSON.stringify(data, null, 2)
+    })
+      .then(response => response.json())
+      .then(function (res) {
+        console.log(res)
+        if (res.code === 200) {
+          app.setState({
+            watch: res.data
+          })
+        } else if (res.code === 401) {
+          alert(res.msg)
+          app.loginOut()
+        } else {
+          alert(res.msg)
+        }
+      });
+  }
+
+  unWatch(e) {
+    let url = "http://localhost:3333/unwatch"
+    let app = this
+    let data = {
+      user_id: this.state.user.id,
+      w_id: parseInt(e.target.name)
+    }
+    fetch(url, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        "authorization": this.state.user.token,
+        "username": this.state.user.username
+      },
+      body: JSON.stringify(data, null, 2)
+    })
+      .then(response => response.json())
+      .then(function (res) {
+        console.log(res)
+        if (res.code === 200) {
+          app.setState({
+            watch: res.data
+          })
+        } else if (res.code === 401) {
+          alert(res.msg)
+          app.loginOut()
+        } else {
+          alert(res.msg)
+        }
+      });
+  }
+
+  postMessage(e) {
+    let url = "http://localhost:3333/push/" + (this.state.user && this.state.user.id)
+    let app = this
+    let data = {
+      message: this.state.message
+    }
+    fetch(url, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        "authorization": this.state.user.token,
+        "username": this.state.user.username
+      },
+      body: JSON.stringify(data, null, 2)
+    })
+      .then(response => response.json())
+      .then(function (res) {
+        console.log(res)
+        if (res.code === 200) {
+          alert(res.msg)
+        } else if (res.code === 401) {
+          alert(res.msg)
+          app.loginOut()
+        } else {
+          alert(res.msg)
+        }
+      });
+  }
+
+  handleWatch(e) {
+    if (e.target.key == 0) {
+      this.unWatch(e)
+    } else {
+      this.Watch(e)
+    }
   }
 
   handleInput(e) {
@@ -89,13 +258,20 @@ class Home extends Component {
       <Layout>
         <div style={bg}>
           <Typography >
+            ID: {this.state.user.id}
+          </Typography>
+          <Typography >
             用户名: {this.state.user.username}
           </Typography>
           <Typography >
             身份: {this.state.user.identity == 1 ? '学生' : '老师'}
           </Typography>
         </div>
-        <button onClick={this.login}>
+        <input type="text" placeholder="请输入要退送的消息" name="message" value={this.state.message} onChange={this.handleInput}></input>
+        <button onClick={this.postMessage}>
+          推送
+        </button>
+        <button onClick={this.loginOut}>
           退出登录
         </button>
         <input type="text" placeholder="请输入班级id" name="class" value={this.state.class} onChange={this.handleInput}></input>
@@ -110,6 +286,38 @@ class Home extends Component {
             <div>
               <Typography >用户名 : {item.username} </Typography>
               <Typography >身份 : {item.identity == 1 ? '学生' : '老师'} </Typography>
+            </div>
+          ))
+        }
+        <Typography >
+          关注列表:
+        </Typography>
+        <button onClick={this.updateWatch}>
+          查询
+        </button>
+        {
+          this.state.watch && this.state.watch.map((item, index) => (
+            <div>
+              <Typography >用户名 : {item.username} </Typography>
+              <button name={item.id} onClick={this.unWatch}>
+                取消关注
+              </button>
+            </div>
+          ))
+        }
+        <Typography >
+          用户列表:
+        </Typography>
+        <button onClick={this.updateUserInfo}>
+          查询
+        </button>
+        {
+          this.state.userList && this.state.userList.map((item, index) => (
+            <div>
+              <Typography >用户名 : {item.username} </Typography>
+              <button key={item.unWatch} name={item.id} onClick={this.handleWatch}>
+                {item.unWatch == 0 ? `取消关注` : `关注`}
+              </button>
             </div>
           ))
         }

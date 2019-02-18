@@ -4,7 +4,9 @@ import (
 	"ComiruSerivce/src/helper"
 	"ComiruSerivce/src/models"
 	"encoding/json"
+	"github.com/gorilla/mux"
 	"net/http"
+	"strconv"
 )
 
 type RegisterResponse struct {
@@ -46,5 +48,38 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		helper.ResponseWithJson(w, http.StatusInternalServerError, helper.Response{Code: http.StatusInternalServerError, Msg: err.Error()})
 	} else {
 		helper.ResponseWithJson(w, http.StatusOK, helper.Response{Code: http.StatusOK, Data: data})
+	}
+}
+
+
+func UsersByWatch(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	id := vars["id"]
+	intId, err := strconv.ParseInt(id, 10, 64)
+	if err != nil || intId == 0 {
+		helper.ResponseWithJson(w, http.StatusInternalServerError, helper.Response{Code: http.StatusInternalServerError, Msg: "参数不合法"})
+	} else {
+		result, err := models.UsersByWatch(id)
+		if err != nil {
+			helper.ResponseWithJson(w, http.StatusInternalServerError, helper.Response{Code: http.StatusInternalServerError, Msg: err.Error()})
+		} else {
+			helper.ResponseWithJson(w, http.StatusOK, helper.Response{Code: http.StatusOK, Data: result})
+		}
+	}
+}
+
+func UsersByWatched(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	id := vars["id"]
+	intId, err := strconv.ParseInt(id, 10, 64)
+	if err != nil || intId == 0 {
+		helper.ResponseWithJson(w, http.StatusInternalServerError, helper.Response{Code: http.StatusInternalServerError, Msg: "参数不合法"})
+	} else {
+		result, err := models.UsersByWatched(id)
+		if err != nil {
+			helper.ResponseWithJson(w, http.StatusInternalServerError, helper.Response{Code: http.StatusInternalServerError, Msg: err.Error()})
+		} else {
+			helper.ResponseWithJson(w, http.StatusOK, helper.Response{Code: http.StatusOK, Data: result})
+		}
 	}
 }

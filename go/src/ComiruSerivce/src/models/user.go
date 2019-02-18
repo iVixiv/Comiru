@@ -16,6 +16,7 @@ type User struct {
 	Class    string `bson:"class" json:"class"`
 	Token    string `bson:"token" json:"token,omitempty"`
 	Identity uint8  `bson:"identity" json:"identity"`
+	UnWatch  uint8  `bson:"unWatch" json:"unWatch" `
 }
 
 type JwtToken struct {
@@ -29,7 +30,7 @@ func MD5(str string) string {
 }
 
 //注册
-func Register(username, password,class string, identity uint8) (string, error) {
+func Register(username, password, class string, identity uint8) (string, error) {
 	//只保存密码摘要
 	password = MD5(password)
 	//生成Token
@@ -73,4 +74,49 @@ func Login(username, password string) (*User, error) {
 	}
 	user.Token = token
 	return &user, nil
+}
+
+func UsersByWatch(user_id string) (*[]User, error) {
+	sql := `SELECT user.id,username,class,identity,isnull(watch.id) unwatch FROM user LEFT JOIN watch ON user.id = watch.w_id AND watch.user_id= ? AND is_deleted = 0 WHERE user.id != ?`
+	var args []interface{}
+	args = append(args, user_id)
+	args = append(args, user_id)
+
+	result := make([]User, 0)
+	rows, err := MySQL.Query(sql, args...)
+	if err != nil {
+		return &result, err
+	}
+	for rows.Next() {
+		var user = User{}
+		err := rows.Scan(&user.Id, &user.UserName, &user.Class, &user.Identity,&user.UnWatch)
+		if err != nil {
+			log.Fatal(err)
+			return &result, err
+		}
+		result = append(result, user)
+	}
+	return &result, nil
+}
+
+func UsersByWatched(user_id string) (*[]User, error) {
+	sql := `SELECT user.id,username,class,identity FROM watch LEFT JOIN user ON user.id = watch.w_id WHERE watch.is_deleted = 0 AND watch.user_id=?`
+	var args []interface{}
+	args = append(args, user_id)
+
+	result := make([]User, 0)
+	rows, err := MySQL.Query(sql, args...)
+	if err != nil {
+		return &result, err
+	}
+	for rows.Next() {
+		var user = User{}
+		err := rows.Scan(&user.Id, &user.UserName, &user.Class, &user.Identity)
+		if err != nil {
+			log.Fatal(err)
+			return &result, err
+		}
+		result = append(result, user)
+	}
+	return &result, nil
 }
