@@ -20,12 +20,39 @@ const bg = {
   fontFamily: 'NotoSansHans'
 };
 
-const styles = (theme) => {
-  console.log(theme);
-  return {
 
-  };
-};
+const styles = theme => ({
+  title: {
+    fontSize: 40,
+    fontFamily: 'NotoSansHans',
+    marginBottom: 40
+  },
+  input: {
+    width: 300,
+    height: 40,
+    marginTop: 30
+  },
+  btnDiv: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginTop: 30,
+    marginBottom: 30
+  },
+  btn: {
+    width: 80,
+    height: 30,
+    marginRight: 30,
+    marginLeft: 30
+  },
+  select: {
+    width: 80,
+    height: 30,
+    marginRight: 30,
+    marginLeft: 30
+  }
+});
 
 class Register extends Component {
   constructor(props) {
@@ -56,7 +83,7 @@ class Register extends Component {
       username: this.state.username,
       password: this.state.password,
       class: this.state.class,
-      identity: this.state.identity
+      identity: parseInt(this.state.identity)
     }
     if (user.name == "" || user.password == "") {
       alert("账号密码不能为空")
@@ -103,20 +130,23 @@ class Register extends Component {
     return (
       <Layout>
         <div style={bg}>
-          <input type="text" placeholder="用户名" name="username" value={this.state.username} onChange={this.handleInput}></input>
-          <input type="text" placeholder="密码" name="password" value={this.state.password} onChange={this.handleInput}></input>
-          <select value={this.state.class} name="class" onChange={this.handleInput}>
-            {
-              this.state.ops.map((item, index) => (
-                <option key={index} value={item.id}>{item.name}</option>
-              ))
-            }
-          </select>
-          <select value={this.state.identity} onChange={this.handleInput} name="identity">
-            <option key="1" value="1">学生</option>
-            <option key="2" value="2">老师</option>
-          </select>
-          <button onClick={this.login}>
+          <Typography class={classes.title}> 注册</Typography>
+          <input class={classes.input} type="text" placeholder="用户名" name="username" value={this.state.username} onChange={this.handleInput}></input>
+          <input class={classes.input} type="text" placeholder="密码" name="password" value={this.state.password} onChange={this.handleInput}></input>
+          <div class={classes.btnDiv}>
+            <select class={classes.select} value={this.state.class} name="class" onChange={this.handleInput}>
+              {
+                this.state.ops.map((item, index) => (
+                  <option key={index} value={item.id}>{item.name}</option>
+                ))
+              }
+            </select>
+            <select class={classes.select} value={this.state.identity} onChange={this.handleInput} name="identity">
+              <option key="1" value="1">学生</option>
+              <option key="2" value="2">老师</option>
+            </select>
+          </div>
+          <button class={classes.btn} onClick={this.login}>
             注册
           </button>
         </div>

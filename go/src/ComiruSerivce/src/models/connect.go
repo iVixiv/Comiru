@@ -14,7 +14,7 @@ var (
 // 务必调用 defer db.SafeClose() 安全关闭连接
 func Connect() {
 	var err error
-	MySQL, err = sql.Open("mysql", "comiru:zxc123567@tcp(127.0.0.1:3306)/comiru?charset=utf8")
+	MySQL, err = sql.Open("mysql", "comiru:zxc123567@tcp(111.231.92.160:3306)/comiru?charset=utf8")
 	if err != nil {
 		log.Print("Failed to open mysql connect : %s", err.Error())
 	}

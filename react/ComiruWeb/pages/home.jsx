@@ -20,12 +20,80 @@ const bg = {
   fontFamily: 'NotoSansHans'
 };
 
-const styles = (theme) => {
-  console.log(theme);
-  return {
 
-  };
-};
+const styles = theme => ({
+  title: {
+    fontSize: 40,
+    fontFamily: 'NotoSansHans',
+    marginBottom: 40
+  },
+  input: {
+    width: 80,
+    height: 30,
+  },
+  message: {
+    height: 40,
+    marginRight: 30,
+    marginBottom: 30
+  },
+  btnDiv: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginTop: 40
+  },
+  btn: {
+    width: 80,
+    height: 30,
+    marginRight: 30,
+    marginLeft: 30
+  },
+  user_layout: {
+    display: 'flex',
+    alignItems: 'left',
+    flexDirection: 'column',
+    flex: 1,
+    fontFamily: 'NotoSansHans'
+  },
+  user_text: {
+    fontSize: 16,
+    padding: 0,
+    marginLeft: 30,
+    marginTop: 0,
+    marginBottom: 10
+  },
+  head: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    width: '100%',
+    fontFamily: 'NotoSansHans'
+  },
+  line: {
+    width: '100%',
+    height: 1,
+    marginTop: 20,
+    marginBottom: 20,
+    backgroundColor: "#aaa"
+  },
+  class_input_view: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'left',
+    flexDirection: 'row',
+  },
+  userDiv: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'left',
+    flexDirection: 'row',
+  },
+  username: {
+    width: 200,
+    margin: 0
+  }
+});
 
 class Home extends Component {
   constructor(props) {
@@ -46,6 +114,7 @@ class Home extends Component {
     this.handleWatch = this.handleWatch.bind(this)
     this.updateUserInfo = this.updateUserInfo.bind(this)
     this.postMessage = this.postMessage.bind(this)
+    this.updateListState = this.updateListState.bind(this)
   }
 
   componentDidMount() {
@@ -145,12 +214,12 @@ class Home extends Component {
       });
   }
 
-  Watch(e) {
+  Watch(item) {
     let url = "http://localhost:3333/watch"
     let app = this
     let data = {
       user_id: this.state.user.id,
-      w_id: parseInt(e.target.name)
+      w_id: parseInt(item.id)
     }
     fetch(url, {
       method: 'POST',
@@ -165,9 +234,9 @@ class Home extends Component {
       .then(function (res) {
         console.log(res)
         if (res.code === 200) {
-          app.setState({
-            watch: res.data
-          })
+          alert("关注成功")
+          item.unWatch = 0
+          app.updateListState(item)
         } else if (res.code === 401) {
           alert(res.msg)
           app.loginOut()
@@ -177,12 +246,32 @@ class Home extends Component {
       });
   }
 
-  unWatch(e) {
+  updateListState(result) {
+    let list = this.state.userList
+    let watch = this.state.watch
+    list.map((item, index) => {
+      if (item.id == result.id) {
+        item.unWatch = result.unWatch
+      }
+    })
+    if (result.unWatch == 1) {
+      watch.splice(watch.findIndex(item => item.id === result.id), 1)
+    } else {
+      watch.push(result)
+    }
+
+    this.setState({
+      userList: list,
+      watch: watch
+    })
+  }
+
+  unWatch(item) {
     let url = "http://localhost:3333/unwatch"
     let app = this
     let data = {
       user_id: this.state.user.id,
-      w_id: parseInt(e.target.name)
+      w_id: parseInt(item.id)
     }
     fetch(url, {
       method: 'POST',
@@ -197,9 +286,9 @@ class Home extends Component {
       .then(function (res) {
         console.log(res)
         if (res.code === 200) {
-          app.setState({
-            watch: res.data
-          })
+          item.unWatch = 1
+          alert("取消关注成功")
+          app.updateListState(item)
         } else if (res.code === 401) {
           alert(res.msg)
           app.loginOut()
@@ -238,11 +327,11 @@ class Home extends Component {
       });
   }
 
-  handleWatch(e) {
-    if (e.target.key == 0) {
-      this.unWatch(e)
+  handleWatch(item) {
+    if (item.unWatch == 0) {
+      this.unWatch(item)
     } else {
-      this.Watch(e)
+      this.Watch(item)
     }
   }
 
@@ -257,70 +346,93 @@ class Home extends Component {
     return (
       <Layout>
         <div style={bg}>
-          <Typography >
-            ID: {this.state.user.id}
-          </Typography>
-          <Typography >
-            用户名: {this.state.user.username}
-          </Typography>
-          <Typography >
-            身份: {this.state.user.identity == 1 ? '学生' : '老师'}
-          </Typography>
+          <Typography className={classes.title}>管理中心</Typography>
+          <div className={classes.head}>
+            <div className={classes.user_layout}>
+              <Typography className={classes.user_text}>
+                ID: {this.state.user.id}
+              </Typography>
+              <Typography className={classes.user_text}>
+                用户名: {this.state.user.username}
+              </Typography>
+              <Typography className={classes.user_text}>
+                身份: {this.state.user.identity == 1 ? '学生' : '老师'}
+              </Typography>
+              <button className={classes.btn} onClick={this.loginOut}>
+                退出登录
+            </button>
+            </div>
+            <div className={classes.user_layout}>
+              <input type="text" className={classes.message} placeholder="请输入要推送的消息" name="message" value={this.state.message} onChange={this.handleInput}></input>
+              <button className={classes.btn} onClick={this.postMessage}>
+                推送
+              </button>
+              <Typography className={classes.user_text}>
+                *默认推送给该登录用户
+              </Typography>
+            </div>
+          </div>
+          <div className={classes.line} />
+
+          <div className={classes.head}>
+            <div className={classes.user_layout}>
+              <div className={classes.class_input_view}>
+                <button className={classes.btn} onClick={this.updateClassInfo}>
+                  查询
+                </button>
+                <input className={classes.input} type="text" placeholder="请输入班级id" name="class" value={this.state.class} onChange={this.handleInput}></input>
+              </div>
+              <Typography className={classes.user_text}>
+                当前班级成员：
+              </Typography>
+
+              {
+                this.state.classInfo && this.state.classInfo.map((item, index) => (
+                  <div key={index} className={classes.userDiv}>
+                    <Typography className={classes.username}>用户名 : {item.username} </Typography>
+                    <Typography >身份 : {item.identity == 1 ? '学生' : '老师'} </Typography>
+                  </div>
+                ))
+              }
+            </div>
+            <div className={classes.user_layout}>
+              <button className={classes.btn} onClick={this.updateWatch}>
+                查询
+              </button>
+              <Typography className={classes.user_text}>
+                关注列表:
+             </Typography>
+              {
+                this.state.watch && this.state.watch.map((item, index) => (
+                  <div key={index} className={classes.userDiv}>
+                    <Typography className={classes.username}>用户名 : {item.username} </Typography>
+                    <button key={item.id} name={item.unWatch} onClick={this.unWatch.bind(this, item)}>
+                      取消关注
+                    </button>
+                  </div>
+                ))
+              }
+            </div>
+            <div className={classes.user_layout}>
+              <button className={classes.btn} onClick={this.updateUserInfo}>
+                查询
+              </button>
+              <Typography className={classes.user_text}>
+                用户列表:
+              </Typography>
+              {
+                this.state.userList && this.state.userList.map((item, index) => (
+                  <div key={index} className={classes.userDiv}>
+                    <Typography className={classes.username}>用户名 : {item.username} </Typography>
+                    <button value={item} key={item.id} name={item.unWatch} onClick={this.handleWatch.bind(this, item)}>
+                      {item.unWatch == 0 ? `取消关注` : `关注`}
+                    </button>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
         </div>
-        <input type="text" placeholder="请输入要退送的消息" name="message" value={this.state.message} onChange={this.handleInput}></input>
-        <button onClick={this.postMessage}>
-          推送
-        </button>
-        <button onClick={this.loginOut}>
-          退出登录
-        </button>
-        <input type="text" placeholder="请输入班级id" name="class" value={this.state.class} onChange={this.handleInput}></input>
-        <button onClick={this.updateClassInfo}>
-          查询
-        </button>
-        <Typography >
-          当前班级成员：
-        </Typography>
-        {
-          this.state.classInfo && this.state.classInfo.map((item, index) => (
-            <div>
-              <Typography >用户名 : {item.username} </Typography>
-              <Typography >身份 : {item.identity == 1 ? '学生' : '老师'} </Typography>
-            </div>
-          ))
-        }
-        <Typography >
-          关注列表:
-        </Typography>
-        <button onClick={this.updateWatch}>
-          查询
-        </button>
-        {
-          this.state.watch && this.state.watch.map((item, index) => (
-            <div>
-              <Typography >用户名 : {item.username} </Typography>
-              <button name={item.id} onClick={this.unWatch}>
-                取消关注
-              </button>
-            </div>
-          ))
-        }
-        <Typography >
-          用户列表:
-        </Typography>
-        <button onClick={this.updateUserInfo}>
-          查询
-        </button>
-        {
-          this.state.userList && this.state.userList.map((item, index) => (
-            <div>
-              <Typography >用户名 : {item.username} </Typography>
-              <button key={item.unWatch} name={item.id} onClick={this.handleWatch}>
-                {item.unWatch == 0 ? `取消关注` : `关注`}
-              </button>
-            </div>
-          ))
-        }
       </Layout>
     );
   }

@@ -20,12 +20,31 @@ const bg = {
   fontFamily: 'NotoSansHans'
 };
 
-const styles = (theme) => {
-  console.log(theme);
-  return {
-
-  };
-};
+const styles = theme => ({
+  title: {
+    fontSize: 40,
+    fontFamily: 'NotoSansHans',
+    marginBottom: 40
+  },
+  input: {
+    width: 300,
+    height: 40,
+    marginTop: 30
+  },
+  btnDiv: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginTop: 40
+  },
+  btn: {
+    width: 80,
+    height: 30,
+    marginRight: 30,
+    marginLeft: 30
+  }
+});
 
 class Index extends Component {
   constructor(props) {
@@ -87,17 +106,19 @@ class Index extends Component {
     return (
       <Layout>
         <div style={bg}>
-          <input type="text" placeholder="用户名" name="username" value={this.state.username} onChange={this.handleInput}></input>
-          <input type="text" placeholder="密码" name="password" value={this.state.password} onChange={this.handleInput}></input>
-          <button onClick={this.login}>
-            登录
-          </button>
-          <Link href="/register">
-            <button >
-              去注册
-          </button>
-          </Link>
-          
+          <Typography class={classes.title}> Comiru Test Web</Typography>
+          <input class={classes.input} type="text" placeholder="用户名" name="username" value={this.state.username} onChange={this.handleInput}></input>
+          <input class={classes.input} type="password" placeholder="密码" name="password" value={this.state.password} onChange={this.handleInput}></input>
+          <div class={classes.btnDiv}>
+            <button class={classes.btn} onClick={this.login}>
+              登录
+            </button>
+            <Link href="/register">
+              <button class={classes.btn}  >
+                去注册
+              </button>
+            </Link>
+          </div>
         </div>
       </Layout>
     );

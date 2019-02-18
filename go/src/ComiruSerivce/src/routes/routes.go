@@ -3,7 +3,6 @@ package routes
 import (
 	"ComiruSerivce/src/auth"
 	"ComiruSerivce/src/controllers"
-	"ComiruSerivce/src/helper"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -21,7 +20,6 @@ var routes []Route
 func init() {
 	register("GET", "/classes", controllers.Classes, nil)
 	register("GET", "/class/{id}", controllers.ClassNumbers, auth.TokenMiddleware)
-	register("OPTIONS", "/class/{id}", handleCors, nil)
 	register("POST", "/user/register", controllers.Register, nil)
 	register("POST", "/user/login", controllers.Login, nil)
 	register("POST", "/push/{id}", controllers.PushNotify, nil)
@@ -29,10 +27,6 @@ func init() {
 	register("GET", "/watched/{id}", controllers.UsersByWatched, nil)
 	register("POST", "/watch", controllers.Watch, nil)
 	register("POST", "/unwatch", controllers.UnWatch, nil)
-}
-
-func handleCors(w http.ResponseWriter, r *http.Request) {
-	helper.ResponseWithJson(w, http.StatusOK, helper.Response{Code: http.StatusOK})
 }
 
 func NewRouter() *mux.Router {
