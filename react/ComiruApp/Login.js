@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Button, TextInput, AsyncStorage } from "react-native";
+import LineLogin from './LineLogin'
 
 class LoginPage extends React.Component {
 
@@ -41,6 +42,12 @@ class LoginPage extends React.Component {
           }
         />
         <Button
+          title="line登录"
+          onPress={() =>
+            this.lineLogin()
+          }
+        />
+        <Button
           title="注册"
           onPress={() =>
             this.register()
@@ -48,6 +55,15 @@ class LoginPage extends React.Component {
         />
       </View>
     );
+  }
+  lineLogin() {
+    LineLogin.login()
+      .then((user) => {
+        console.log(user.profile.displayName)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   register() {
