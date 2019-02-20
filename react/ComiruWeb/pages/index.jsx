@@ -10,6 +10,7 @@ import Link from 'next/link';
 // import { Button } from 'antd-mobile';
 
 import Layout from '../components/Layout';
+import Router from 'next/router'
 
 const bg = {
   display: 'flex',
@@ -62,7 +63,7 @@ class Index extends Component {
     if (data != null && data != "") {
       var user = JSON.parse(data)
       if (user != null && user.token != "") {
-        window.location = "/home"
+        Router.push('/home')
       }
     }
   }
@@ -92,7 +93,7 @@ class Index extends Component {
         if (res.code === 200) {
           window.localStorage.setItem("user", JSON.stringify(res.data))
           alert("登录成功")
-          window.location = "/"
+          Router.push('/home')
         } else {
           alert(res.msg)
         }

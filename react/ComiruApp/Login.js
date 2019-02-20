@@ -9,7 +9,6 @@ class LoginPage extends React.Component {
       username: '',
       password: ''
     };
-    this.read()
   }
 
   static navigationOptions = {
@@ -41,33 +40,78 @@ class LoginPage extends React.Component {
             this.login()
           }
         />
+        <Button
+          title="注册"
+          onPress={() =>
+            this.register()
+          }
+        />
       </View>
     );
   }
-  read() {
-    AsyncStorage.getItem('user', (error, result) => {
-      var userInfo = JSON.parse(result)
-      this.setState({
-        username: userInfo.username,
-        password: userInfo.password
-      })
-    })
+
+  register() {
+    var user = {
+      username: this.state.username,
+      password: this.state.password,
+      class: "1",
+      identity: 1
+    }
+    if (user.name == "" || user.password == "") {
+      alert("账号密码不能为空")
+    } else {
+      let url = global.app.host + '/user/register';
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        body: JSON.stringify(user, null, 2)
+      }).then(response => response.json()).then(function (res) {
+        console.log(res)
+        if (res.code === 200) {
+          alert("注册成功")
+        } else {
+          alert(res.msg)
+        }
+      });
+    }
   }
   login() {
-    var userInfo = {
-      password: this.state.password,
-      username: this.state.username
-    };
-    AsyncStorage.setItem('user', JSON.stringify(userInfo), (error) => {
-      if (error) {
-        alert('存储失败');
-      } else {
-        alert('存储成功');
-      }
-    });
-    this.props.navigation.navigate('Home')
+    let page = this
+    var data = {
+      username: this.state.username,
+      password: this.state.password
+    }
+    if (data.name == "" || data.password == "") {
+      alert("账号密码不能为空")
+    } else {
+      fetch(global.app.host + '/user/login', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        body: JSON.stringify(data, null, 2)
+      }).then(response =>
+        response.json()
+      ).then(function (res) {
+        console.log(res)
+        if (res.code === 200) {
+          AsyncStorage.setItem('user', JSON.stringify(res.data), (error) => {
+            if (error) {
+              alert('存储失败');
+            } else {
+            }
+            page.props.navigation.navigate('Home')
+          });
+        } else {
+          alert(res.msg)
+        }
+      });
+    }
   }
 }
+
 
 
 

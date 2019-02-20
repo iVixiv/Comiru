@@ -99,7 +99,7 @@ class Register extends Component {
         console.log(res)
         if (res.code === 200) {
           alert("注册成功")
-          window.location = "/"
+          Router.push('/')
         } else {
           alert(res.msg)
         }

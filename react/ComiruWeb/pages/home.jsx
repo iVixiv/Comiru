@@ -10,6 +10,7 @@ import Link from 'next/link';
 // import { Button } from 'antd-mobile';
 
 import Layout from '../components/Layout';
+import Router from 'next/router'
 
 const bg = {
   display: 'flex',
@@ -120,7 +121,7 @@ class Home extends Component {
   componentDidMount() {
     var user = JSON.parse(window.localStorage.getItem("user"))
     if (user == null || user.token == "") {
-      window.location = "/"
+      Router.push('/')
     } else {
       this.setState({ user: user })
       // this.updateClassInfo()
@@ -130,7 +131,7 @@ class Home extends Component {
 
   loginOut() {
     window.localStorage.setItem("user", "")
-    window.location = "/"
+    Router.push('/')
   }
 
   updateClassInfo() {
